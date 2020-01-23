@@ -1,8 +1,4 @@
 <?php
-
-// gli specifico come interpretare il formato del file
-header('Content-Type: application/json');
-
 $records = [
 [
 "poster" => "https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg",
@@ -70,13 +66,37 @@ $records = [
 [
 "poster" => "https://m.media-amazon.com/images/I/71K9CbNZPsL._SS500_.jpg",
 "title" => "Bad",
-"author" => "Michael Jacjson",
+"author" => "Michael Jackson",
 "genre" => "Pop",
 "year" => "1987"
 ]
 ];
 
-// trasforma da formato "stringa" a formato JSON
-echo json_encode($records);
+// verifico se c'è una query string
+if (empty($_GET) || ($_GET['query'] == 'all')) {
+    // non c'è la query string, o la richiesta è per tutti i generi ('all)')
+    // trasformo la struttura dati in un formato stringa JSON
+    // e restituisco, con una echo, il DB completo
+    echo json_encode($records);
 
+} else {
+    // costruisco una struttura dati che contiene solo i generi richiesti
+
+    // recupero il genere richiesto
+    $genre_selected = $_GET['query'];
+
+    // preparo un array per memorizzare i dichi del genere selezionato
+    $records_by_genre=[];
+    // scorro il DB e seleziono i dischi che appartengono al genere selezionato
+    foreach ($records as $record) {
+
+        if (strtolower($record['genre']) == $genre_selected) {
+            // creo un nuovo array con soli i dischi del genere selezionato
+            array_push($records_by_genre, $record);
+        }
+    }
+
+    // trasformo la struttura dati in un formato stringa JSON e la restituisco con una echo
+    echo json_encode($records_by_genre);
+}
 ?>
