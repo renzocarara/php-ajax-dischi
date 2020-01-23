@@ -72,9 +72,9 @@ $records = [
 ]
 ];
 
-// verifico se c'è una query string
+// verifico se c'è o meno una query string
 if (empty($_GET) || ($_GET['query'] == 'all')) {
-    // non c'è la query string, o la richiesta è per tutti i generi ('all)')
+    // non c'è la query string, o la richiesta è per tutti i generi ('all')
     // trasformo la struttura dati in un formato stringa JSON
     // e restituisco, con una echo, il DB completo
     echo json_encode($records);
@@ -85,7 +85,7 @@ if (empty($_GET) || ($_GET['query'] == 'all')) {
     // recupero il genere richiesto
     $genre_selected = $_GET['query'];
 
-    // preparo un array per memorizzare i dichi del genere selezionato
+    // preparo un array per memorizzare i dischi del genere selezionato
     $records_by_genre=[];
     // scorro il DB e seleziono i dischi che appartengono al genere selezionato
     foreach ($records as $record) {
