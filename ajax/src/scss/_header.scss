@@ -1,16 +1,17 @@
 /* header style */
+
 header {
     height: 80px;
-}
 
-.header-container {
-    background-color: #454342;
-    height: 100%;
-}
+    .header-container {
+        background-color: $bgc_header;
+        height: 100%;
 
-.header-container img {
-    height: 100%;
-    line-height: 80px;
-    padding: 20px;
+        img {
+            height: 100%;
+            line-height: 80px;
+            padding: 20px;
+        }
+    }
 }
 /* end header style */

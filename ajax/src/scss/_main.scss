@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: #1E2D3B;
+    background-color: $bgc_cards_container;
     /* altezza viewport - altezza header - altezza tag selezione genere */
     min-height: calc(100vh - 80px - 65px);
     padding-bottom: 40px;
@@ -19,58 +19,54 @@
     height: 350px;
     width: 200px;
     padding: 20px;
-    background-color: #333e49;
+    background-color: $bgc_cards;
     margin: 40px 20px 0;
-}
 
-.card img {
-    width: 100%;
-}
+    img {
+        width: 100%;
+    }
 
-.card h3 {
-    text-transform: uppercase;
-    text-align: center;
-    color: white;
-    margin: 20px 0;
-}
+    h3 {
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        margin: 20px 0;
+    }
 
-.card p {
-    text-align: center;
-    color: gray;
-}
-
-.select-container {
-    background-color: darkgrey;
+    p {
+        text-align: center;
+        color: gray;
+    }
 }
 
 #card-genre {
     margin: 20px;
     font-size: 18px;
     color: black;
-}
 
-#card-genre option {
-    color: white;
-}
+    option {
+        color: white;
+    }
 
-#card-genre option:nth-child(1) {
-    color: black;
-}
+    option:nth-child(1) {
+        color: black;
+    }
 
-#card-genre option:nth-child(2) {
-    background-color: blue;
-}
+    option:nth-child(2) {
+        background-color: blue;
+    }
 
-#card-genre option:nth-child(3) {
-    background-color: green;
-}
+    option:nth-child(3) {
+        background-color: green;
+    }
 
-#card-genre option:nth-child(4) {
-    background-color: purple;
-}
+    option:nth-child(4) {
+        background-color: purple;
+    }
 
-#card-genre option:nth-child(5) {
-    background-color: red;
+    option:nth-child(5) {
+        background-color: red;
+    }
 }
 
 [data-genre=Metal] {
@@ -106,13 +102,17 @@
 }
 
 .bgc-none {
-    background-color: darkgrey;
+    background-color: darkgray;
 }
 
-.select-container i {
-    margin: 15px 30px 15px 0;
-    color: white;
-    float: right;
+.select-container {
+    background-color: darkgrey;
+
+    i {
+        margin: 15px 30px 15px 0;
+        color: white;
+        float: right;
+    }
 }
 @media screen and (max-width:493px) {
     .select-container i {

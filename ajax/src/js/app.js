@@ -1,3 +1,9 @@
+const Handlebars = require("handlebars");
+// const template = Handlebars.compile("Name: {{name}}");
+// console.log(template({
+// name: "Nils"
+// }));
+
 // Replichiamo l'esercizio dei dischi musicali, questa volta però gestendo noi i dati.
 // Creiamo un array di array che rappresentano dei dischi musicali.
 //Se volete, potete usare gli stessi dati che trovate sulla api di boolean:
