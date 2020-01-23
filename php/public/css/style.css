@@ -1,0 +1,175 @@
+/* reset style */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* end reset style */
+
+/* commom style */
+
+body {
+  background-color: black;
+  font-family: sans-serif;
+}
+
+/*  end commom style */
+
+/* header style */
+
+header {
+  height: 80px;
+}
+
+.header-container {
+  background-color: #454342;
+  height: 100%;
+}
+
+.header-container img {
+  height: 100%;
+  line-height: 80px;
+  padding: 20px;
+}
+
+/* end header style */
+
+/* main style */
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.cards-container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  flex-wrap: wrap;
+  background-color: #1E2D3B;
+  /* altezza viewport - altezza header - altezza tag selezione genere */
+  min-height: calc(100vh - 80px - 65px);
+  padding-bottom: 40px;
+}
+
+.card {
+  height: 350px;
+  width: 200px;
+  padding: 20px;
+  background-color: #333e49;
+  margin: 40px 20px 0;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h3 {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  margin: 20px 0;
+}
+
+.card p {
+  text-align: center;
+  color: gray;
+}
+
+.select-container {
+  background-color: darkgrey;
+}
+
+#card-genre {
+  margin: 20px;
+  font-size: 18px;
+  color: black;
+}
+
+#card-genre option {
+  color: white;
+}
+
+#card-genre option:nth-child(1) {
+  color: black;
+}
+
+#card-genre option:nth-child(2) {
+  background-color: blue;
+}
+
+#card-genre option:nth-child(3) {
+  background-color: green;
+}
+
+#card-genre option:nth-child(4) {
+  background-color: purple;
+}
+
+#card-genre option:nth-child(5) {
+  background-color: red;
+}
+
+[data-genre=Metal] {
+  border: 2px solid purple;
+}
+
+[data-genre=Rock] {
+  border: 2px solid red;
+}
+
+[data-genre=Jazz] {
+  border: 2px solid green;
+}
+
+[data-genre=Pop] {
+  border: 2px solid blue;
+}
+
+.bgc-purple {
+  background-color: purple;
+}
+
+.bgc-red {
+  background-color: red;
+}
+
+.bgc-green {
+  background-color: green;
+}
+
+.bgc-blue {
+  background-color: blue;
+}
+
+.bgc-none {
+  background-color: darkgrey;
+}
+
+.select-container i {
+  margin: 15px 30px 15px 0;
+  color: white;
+  float: right;
+}
+
+@media screen and (max-width: 493px) {
+  .select-container i {
+    margin: 15px 10px 15px 0;
+  }
+}
+
+@media screen and (max-width: 379px) {
+  .select-container i {
+    margin: 15px 5px 15px 0;
+  }
+
+  #card-genre {
+    margin: 20px 0;
+  }
+}
+
+/* end main style */
+
